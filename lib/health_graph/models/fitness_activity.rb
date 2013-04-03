@@ -6,7 +6,7 @@ module HealthGraph
 
     def initialize(access_token, params)
       self.access_token = access_token
-      response = get params["uri"], HealthGraph.accept_headers[:fitness_activity]
+      response = get params.uri, HealthGraph.accept_headers[:fitness_activity]
       self.body = response.body
       populate_from_hash! self.body
     end
