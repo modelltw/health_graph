@@ -38,6 +38,10 @@ For more information on authentication & authorization, see http://developer.run
     config.adapter = [FARADAY ADAPTER. DEFAULT IS net_http]
     config.faraday_options = [ADDITIONAL FARADAY OPTIONS. DEFAULT IS EMPTY.]
   end
+  
+An example for faraday_options is the following, which sets the charset to UTF-8:
+
+  config.faraday_options = { headers: { 'Accept-Charset' => 'UTF-8' } }
 
 == Contributing to health_graph
  
